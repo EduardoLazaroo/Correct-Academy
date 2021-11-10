@@ -1,0 +1,11 @@
+git pull
+
+git status
+git add .
+git commit -m "qualquer mensagem de alteração"
+git push
+
+caso esteja na master, git checkout -b main
+ao contrário, git checkout
+-----------------------------------------------------------
+https://gist.github.com/leocomelli/254534e4fec21ec16#tags

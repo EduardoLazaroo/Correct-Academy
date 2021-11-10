@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Informações de Cadastro</ion-card-title>
+    </ion-card-header>
+    <!--        -->
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked" lines="none">Nome Completo</ion-label>
+        <ion-input type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" lines="none">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="userRegister.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="userRegister.password"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Altura: </ion-label>
+        <ion-input min="40" max="240" type="number"></ion-input>
+        <ion-note slot="end">cm</ion-note>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Peso: </ion-label>
+        <ion-input min="40" max="160" type="number"></ion-input>
+        <ion-note slot="end">kg</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
+<ion-button expand="block" color="primary" fill="clear"  (click)="pageInitial()">Já possui conta?</ion-button>
+<ion-button expand="block" color="primary" (click)="register()">Confirmar Cadastro</ion-button>

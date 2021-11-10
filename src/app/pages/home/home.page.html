@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button color="secondary" slot="start"></ion-menu-button>
+    <ion-button class="end" slot="end" color="medium" (click)="logout()">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+<!--        -->
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide.avif"></ion-img>
+    </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide2.avif"></ion-img>
+    </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide3.avif"></ion-img>
+    </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide4.jpg"></ion-img>
+    </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide5.jpg"></ion-img>
+    </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+      <ion-img src="./assets/img/slide/slide6.jpg"></ion-img>
+    </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <!--        -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Treinos sugestivos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ion-text-center">
+        <div>
+          <p>1º: <strong>"Agachamento"</strong></p>
+          <p>2º: <strong>"Supino"</strong></p>
+          <p>3º: <strong>"CrossOver"</strong></p>
+          <p>4º: <strong>"Bicicleta"</strong></p>
+          <p>5º: <strong>"Peck Deck"</strong></p>
+          <p>6º: <strong>"Pular Corda</strong></p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-button href="/midia"  color="primary" expand="block">Treinos</ion-button>

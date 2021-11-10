@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Correct-Academy",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

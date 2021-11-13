@@ -25,8 +25,6 @@ export class PrgprogPage implements OnInit {
     }).catch(error => console.log(error));*/
   }
 
-
-
   ngOnInit() {
     this.perguntasForm = this.formBuilder.group({
       perna: [''],
@@ -35,9 +33,11 @@ export class PrgprogPage implements OnInit {
       aerobico: [''],
     })
   }
+  
   salvarPerguntas() {
     console.log(this.perguntasForm.value)
   }
+  
   async menssageConfirm() {
     const toast = await this.toastController.create({
       message: 'Foi Registrado!',

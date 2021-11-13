@@ -25,16 +25,16 @@ slideOpts = {
   constructor(
     private afa: AngularFireAuth,
     private infosServices: InfoService) {
-    this.infosSubsccription = this.infosServices.getInfos().subscribe(data => {
-      this.infos = data;
-    })
+   // this.infosSubsccription = this.infosServices.getInfos().subscribe(data => {
+      //this.infos = data;
+  //  })
    }
 
   ngOnInit() {
   }
 
   ngOnDestroy() {
-    this.infosSubsccription.unsubscribe();
+  //  this.infosSubsccription.unsubscribe();
   }
 
   logout(){

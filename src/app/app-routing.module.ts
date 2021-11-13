@@ -18,7 +18,11 @@ const routes: Routes = [
   { path: 'aerobico', loadChildren: () => import('./pages/aerobico/aerobico.module').then(m => m.AerobicoPageModule), canActivate: [AuthGuard] },
   { path: 'costas', loadChildren: () => import('./pages/costas/costas.module').then(m => m.CostasPageModule), canActivate: [AuthGuard] },
   { path: 'details', loadChildren: () => import('./pages/details/details.module').then(m => m.DetailsPageModule), canActivate: [AuthGuard] },
-  { path: 'details/:id', loadChildren: () => import('./pages/details/details.module').then(m => m.DetailsPageModule), canActivate: [AuthGuard] }
+  { path: 'details/:id', loadChildren: () => import('./pages/details/details.module').then(m => m.DetailsPageModule), canActivate: [AuthGuard] },  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  }
+
 
 
 ];

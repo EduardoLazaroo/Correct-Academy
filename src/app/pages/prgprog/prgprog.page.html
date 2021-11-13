@@ -10,7 +10,7 @@
       entregará melhores treinos. Depois de concluido você pode alterar.
     </ion-card-content>
   </ion-card>
-
+  <form [formGroup]="perguntasForm" (ngSubmit)="salvarPerguntas()">
   <ion-card>
     <ion-list>
       <ion-list-header>
@@ -18,7 +18,7 @@
       </ion-list-header>
       <ion-item>
         <ion-label>Perna</ion-label>
-        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+        <ion-select formControlName="perna" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
           <ion-select-option value="per1">Iniciante</ion-select-option>
           <ion-select-option value="per2">Moderado</ion-select-option>
           <ion-select-option value="per3">Avançado</ion-select-option>
@@ -28,7 +28,7 @@
 
       <ion-item>
         <ion-label>Costas</ion-label>
-        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+        <ion-select formControlName="costas" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
           <ion-select-option value="cos1">Iniciante</ion-select-option>
           <ion-select-option value="cos2">Moderado</ion-select-option>
           <ion-select-option value="cos3">Avançado</ion-select-option>
@@ -37,7 +37,7 @@
       </ion-item>
       <ion-item>
         <ion-label>Peito</ion-label>
-        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+        <ion-select formControlName="peito" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
           <ion-select-option value="pei1">Iniciante</ion-select-option>
           <ion-select-option value="pei2">Moderado</ion-select-option>
           <ion-select-option value="pei3">Avançado</ion-select-option>
@@ -46,7 +46,7 @@
       </ion-item>
       <ion-item>
         <ion-label>Aerobico</ion-label>
-        <ion-select cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
+        <ion-select formControlName="aerobico" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
           <ion-select-option value="aer1">Iniciante</ion-select-option>
           <ion-select-option value="aer2">Moderado</ion-select-option>
           <ion-select-option value="aer3">Avançado</ion-select-option>
@@ -55,6 +55,7 @@
       </ion-item>
     </ion-list>
   </ion-card>
+  <ion-button color="primary" fill="clear" href="/home">Depois</ion-button>
+  <ion-button type="submit" color="primary" href="/home">Registrar</ion-button>
+  </form>
 </ion-content>
-<ion-button color="primary" fill="clear" href="/home">Depois</ion-button>
-<ion-button color="primary" (click)="menssageConfirm()" href="/home">Registrar</ion-button>

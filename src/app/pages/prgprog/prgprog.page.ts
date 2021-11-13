@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { InfoService, TODO } from 'src/app/services/info.service';
 @Component({
@@ -10,6 +11,7 @@ import { InfoService, TODO } from 'src/app/services/info.service';
 export class PrgprogPage implements OnInit {
   perguntasForm: FormGroup;
   constructor(
+    private router: Router,
     public toastController: ToastController,
     private infoService: InfoService,
     private formBuilder: FormBuilder,
@@ -23,13 +25,7 @@ export class PrgprogPage implements OnInit {
     }).catch(error => console.log(error));*/
   }
 
-  async menssageConfirm() {
-    const toast = await this.toastController.create({
-      message: 'Foi Registrado!',
-      duration: 2000
-    });
-    toast.present();
-  }
+
 
   ngOnInit() {
     this.perguntasForm = this.formBuilder.group({
@@ -41,5 +37,13 @@ export class PrgprogPage implements OnInit {
   }
   salvarPerguntas() {
     console.log(this.perguntasForm.value)
+  }
+  async menssageConfirm() {
+    const toast = await this.toastController.create({
+      message: 'Foi Registrado!',
+      duration: 1000
+    });
+    toast.present();
+    this.router.navigate(['home']);
   }
 }

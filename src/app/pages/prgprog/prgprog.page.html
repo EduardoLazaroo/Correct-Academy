@@ -19,43 +19,43 @@
       <ion-item>
         <ion-label>Perna</ion-label>
         <ion-select formControlName="perna" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
-          <ion-select-option value="per1">Iniciante</ion-select-option>
-          <ion-select-option value="per2">Moderado</ion-select-option>
-          <ion-select-option value="per3">Avançado</ion-select-option>
-          <ion-select-option value="per0">Nenhum</ion-select-option>
+          <ion-select-option value="perIniciante">Iniciante</ion-select-option>
+          <ion-select-option value="perModerado">Moderado</ion-select-option>
+          <ion-select-option value="perAvançado">Avançado</ion-select-option>
+          <ion-select-option value="perNenhum">Nenhum</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>Costas</ion-label>
         <ion-select formControlName="costas" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
-          <ion-select-option value="cos1">Iniciante</ion-select-option>
-          <ion-select-option value="cos2">Moderado</ion-select-option>
-          <ion-select-option value="cos3">Avançado</ion-select-option>
-          <ion-select-option value="cos0">Nenhum</ion-select-option>
+          <ion-select-option value="cosIniciante">Iniciante</ion-select-option>
+          <ion-select-option value="cosModerado">Moderado</ion-select-option>
+          <ion-select-option value="cosAvançado">Avançado</ion-select-option>
+          <ion-select-option value="cosNenhum">Nenhum</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>Peito</ion-label>
         <ion-select formControlName="peito" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
-          <ion-select-option value="pei1">Iniciante</ion-select-option>
-          <ion-select-option value="pei2">Moderado</ion-select-option>
-          <ion-select-option value="pei3">Avançado</ion-select-option>
-          <ion-select-option value="pei0">Nenhum</ion-select-option>
+          <ion-select-option value="peiIniciante">Iniciante</ion-select-option>
+          <ion-select-option value="peiModerado">Moderado</ion-select-option>
+          <ion-select-option value="peiAvançado">Avançado</ion-select-option>
+          <ion-select-option value="peiNenhum">Nenhum</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>Aerobico</ion-label>
         <ion-select formControlName="aerobico" cancelText="Cancelar" okText="Confirmar" placeholder="Selecione">
-          <ion-select-option value="aer1">Iniciante</ion-select-option>
-          <ion-select-option value="aer2">Moderado</ion-select-option>
-          <ion-select-option value="aer3">Avançado</ion-select-option>
-          <ion-select-option value="aer0">Nenhum</ion-select-option>
+          <ion-select-option value="aerIniciante">Iniciante</ion-select-option>
+          <ion-select-option value="aerModerado">Moderado</ion-select-option>
+          <ion-select-option value="aerAvançado">Avançado</ion-select-option>
+          <ion-select-option value="aerNenhum">Nenhum</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>
   </ion-card>
-  <ion-button color="primary" fill="clear" href="/home">Depois</ion-button>
-  <ion-button type="submit" color="primary" href="/home">Registrar</ion-button>
+  <ion-button type="submit" color="primary" expand="block" (click)="menssageConfirm()">Registrar</ion-button>
+ <!--<ion-button color="primary" fill="clear" href="/home" slot="end">Depois</ion-button>-->
   </form>
 </ion-content>

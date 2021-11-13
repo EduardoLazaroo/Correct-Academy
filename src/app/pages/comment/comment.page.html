@@ -12,12 +12,13 @@
     <ion-card-content class="ion-text-justify">
       <p>
         CorrectAcademy é um APP desenvolvido para pessoas que frequentam academia, os usuários podem
-        ser alunos ou professores com <strong>acesso ao conteúdo rapidamente</strong> e de forma <strong>simples</strong>.
+        ser alunos ou professores com <strong>acesso ao conteúdo rapidamente</strong> e de forma
+        <strong>simples</strong>.
         Nosso conteúdo é totalmente didático facilitando o entendimento e proporcionando um melhor resultado.
       </p>
     </ion-card-content>
   </ion-card>
-<!--    card    -->
+  <!--    card    -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Quais são as funcionalidades?</ion-card-title>
@@ -28,76 +29,76 @@
       <p>Perfil do usuário com inforções relevantes e monitoradas.</p>
     </ion-card-content>
   </ion-card>
-<!--    card    -->
+  <!--    card    -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Qual o nosso diferencial?</ion-card-title>
     </ion-card-header>
     <ion-card-content class="ion-text-justify">
-    <p>
-      CorrectAcademy fornece o ao usuário uma caixa de questões que sendo respondidas é possível
-      fornecer treinos específicos <strong>BOOST!</strong>, sendo assim, o perfil quando atualizado 
-      mostra apenas o conteúdo essencial para ser usufruído. No canto superior do App o usuário pode 
-      acessar todos os treinos e terá a possibilidade de alterar o a caixa de questões.
-    </p>
+      <p>
+        CorrectAcademy fornece o ao usuário uma caixa de questões que sendo respondidas é possível
+        fornecer treinos específicos <strong>BOOST!</strong>, sendo assim, o perfil quando atualizado
+        mostra apenas o conteúdo essencial para ser usufruído. No canto superior do App o usuário pode
+        acessar todos os treinos e terá a possibilidade de alterar o a caixa de questões.
+      </p>
     </ion-card-content>
   </ion-card>
-<!--   card     -->
+  <!--   card     -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Desenvolvedores</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-  <!--        -->
-        <ion-item>Eduardo
-          <ion-avatar slot="start">
-            <ion-img src="./assets/avatar/ava1.jpg"></ion-img>
-          </ion-avatar>
-          <ion-fab horizontal="end" vertical="bottom">
+      <!--        -->
+      <ion-item>Eduardo
+        <ion-avatar slot="start">
+          <ion-img src="./assets/avatar/ava1.jpg"></ion-img>
+        </ion-avatar>
+        <ion-fab horizontal="end" vertical="bottom">
+          <ion-fab-button color="primary">
+            <ion-icon md="caret-forward" ios="caret-forward-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="start">
             <ion-fab-button color="primary">
-              <ion-icon md="caret-forward" ios="caret-forward-outline"></ion-icon>
+              <ion-icon name="logo-linkedin" (click)="openLink1()"></ion-icon>
             </ion-fab-button>
-            <ion-fab-list side="start">
-              <ion-fab-button color="primary">
-                <ion-icon name="logo-linkedin" (click)="openLink1()"></ion-icon>
-              </ion-fab-button>
-              <ion-fab-button color="primary">
-                <ion-icon name="logo-instagram" (click)="openIns1()"></ion-icon>
-              </ion-fab-button>
-              <ion-fab-button color="primary">
-                <ion-icon name="logo-github" (click)="openGit1()"></ion-icon>
-              </ion-fab-button>
-            </ion-fab-list>
-          </ion-fab>
-        </ion-item>
-  <!--        -->
-        <ion-item>Klauber
-          <ion-avatar slot="start">
-            <ion-img src="./assets/avatar/ava2.jpg"></ion-img>
-          </ion-avatar>
-          <ion-fab horizontal="end" >
             <ion-fab-button color="primary">
-              <ion-icon md="caret-forward" ios="caret-forward-outline"></ion-icon>
+              <ion-icon name="logo-instagram" (click)="openIns1()"></ion-icon>
             </ion-fab-button>
-            <ion-fab-list side="start">
-              <ion-fab-button color="primary">
+            <ion-fab-button color="primary">
+              <ion-icon name="logo-github" (click)="openGit1()"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </ion-item>
+      <!--        -->
+      <ion-item>Klauber
+        <ion-avatar slot="start">
+          <ion-img src="./assets/avatar/ava2.jpg"></ion-img>
+        </ion-avatar>
+        <ion-fab horizontal="end">
+          <ion-fab-button color="primary">
+            <ion-icon md="caret-forward" ios="caret-forward-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="start">
+            <!--<ion-fab-button color="primary">
                 <ion-icon name="logo-linkedin" (click)="openLink2()"></ion-icon>
               </ion-fab-button>
               <ion-fab-button color="primary">
                 <ion-icon name="logo-instagram"(click)="openIns2()"></ion-icon>
-              </ion-fab-button>
-              <ion-fab-button color="primary">
-                <ion-icon name="logo-github" (click)="openGit2()"></ion-icon>
-              </ion-fab-button>
-            </ion-fab-list>
-          </ion-fab>
-        </ion-item>
-  <!--        -->
-        <ion-item>Gustavo
-          <ion-avatar slot="start">
-            <ion-img src="./assets/avatar/ava3.jpg"></ion-img>
-          </ion-avatar>
-          <ion-fab horizontal="end" vertical="bottom">
+              </ion-fab-button> -->
+            <ion-fab-button color="primary">
+              <ion-icon name="logo-github" (click)="openGit2()"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </ion-item>
+      <!--        -->
+      <ion-item>Gustavo
+        <ion-avatar slot="start">
+          <ion-img src="./assets/avatar/ava3.jpg"></ion-img>
+        </ion-avatar>
+        <!-- <ion-fab horizontal="end" vertical="bottom">
             <ion-fab-button color="primary">
               <ion-icon md="caret-forward" ios="caret-forward-outline"></ion-icon>
             </ion-fab-button>
@@ -112,9 +113,9 @@
                 <ion-icon name="logo-github" (click)="openGit3()"></ion-icon>
               </ion-fab-button>
             </ion-fab-list>
-          </ion-fab>
-        </ion-item>
-    <!--        -->
+          </ion-fab> -->
+      </ion-item>
+      <!--        -->
     </ion-card-content>
   </ion-card>
 </ion-content>

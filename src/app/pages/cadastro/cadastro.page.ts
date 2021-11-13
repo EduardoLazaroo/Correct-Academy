@@ -18,7 +18,7 @@ export class CadastroPage implements OnInit {
     private loadingCtrl: LoadingController,
     private tostCtrl: ToastController,
     private authService: AuthService
-    
+
   ) { }
 
   ngOnInit() {
@@ -41,12 +41,12 @@ export class CadastroPage implements OnInit {
     this.loading = await this.loadingCtrl.create({ message: 'Por Favor aguarde...' });
     return this.loading.present();
   }
- 
+
   async presentToast(message: string) {
     const toast = await this.tostCtrl.create({ message, duration: 6000 });
     toast.present();
   }
-  
+
   pageInitial() {
     this.router.navigate(['login']);
   }

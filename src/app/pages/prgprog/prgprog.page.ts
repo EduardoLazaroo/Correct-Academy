@@ -33,11 +33,11 @@ export class PrgprogPage implements OnInit {
       aerobico: [''],
     })
   }
-  
+
   salvarPerguntas() {
     console.log(this.perguntasForm.value)
   }
-  
+
   async menssageConfirm() {
     const toast = await this.toastController.create({
       message: 'Foi Registrado!',

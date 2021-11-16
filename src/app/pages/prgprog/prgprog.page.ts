@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { InfoService, TODO } from 'src/app/services/info.service';
+
 @Component({
   selector: 'app-prgprog',
   templateUrl: './prgprog.page.html',
@@ -10,6 +11,7 @@ import { InfoService, TODO } from 'src/app/services/info.service';
 })
 export class PrgprogPage implements OnInit {
   perguntasForm: FormGroup;
+
   constructor(
     private router: Router,
     public toastController: ToastController,
@@ -22,7 +24,8 @@ export class PrgprogPage implements OnInit {
     }
     this.infoService.create(borba).then(() => {
       console.log('gravouu!')
-    }).catch(error => console.log(error));*/
+    }).catch(error => console.log(error));
+  */
   }
 
   ngOnInit() {

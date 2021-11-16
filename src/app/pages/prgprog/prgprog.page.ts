@@ -18,6 +18,7 @@ export class PrgprogPage implements OnInit {
     private infoService: InfoService,
     private formBuilder: FormBuilder,
   ) {
+
     /*const borba: TODO = {
       title: 'teste',
       description: 'teste2'
@@ -26,6 +27,7 @@ export class PrgprogPage implements OnInit {
       console.log('gravouu!')
     }).catch(error => console.log(error));
   */
+ 
   }
 
   ngOnInit() {

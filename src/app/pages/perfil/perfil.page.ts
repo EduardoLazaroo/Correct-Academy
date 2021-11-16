@@ -8,32 +8,34 @@ import { Router } from '@angular/router';
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
 })
+/*
 export class TODO {
   $key: string;
   title: string;
   description: string;
-}
+}*/
 
 export class PerfilPage implements OnInit {
-  perguntasForm: FormGroup;
-  Tasks: TODO[];
+ /* perguntasForm: FormGroup;
+  Tasks: TODO[];*/
 
   constructor(
-    private router: Router,
-    private infoService: InfoService,
-    private formBuilder: FormBuilder,
+    private router: Router
+    /*private infoService: InfoService,
+    private formBuilder: FormBuilder*/
   ) { }
 
   ngOnInit() {
-    this.infoService.getTasks().subscribe((res) => {
+   /* this.infoService.getTasks().subscribe((res) => {
       this.Tasks = res.map((t) => {
         return {
           id: t.payload.doc.id,
           ...t.payload.doc.data() as TODO
         };
       })
-    });
-  }
+    });*/
+  }/*
+
   todoList() {
     this.infoService.getTasks()
     .subscribe((data) => {
@@ -46,6 +48,6 @@ export class PerfilPage implements OnInit {
     if (window.confirm('Are you sure?')) {
       this.infoService.delete(id)
     }
-  } 
+  } */
 
 }

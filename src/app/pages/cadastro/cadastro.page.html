@@ -7,7 +7,7 @@
     <ion-card-content>
       <ion-item>
         <ion-label position="stacked" lines="none">Nome Completo</ion-label>
-        <ion-input type="text" ></ion-input>
+        <ion-input type="text" [(ngModel)]="userRegister.nomeCompleto"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked" lines="none">Email</ion-label>
@@ -23,14 +23,14 @@
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Altura: </ion-label>
-        <ion-input min="40" max="240" type="number"></ion-input>
+        <ion-input min="40" max="240" type="number" [(ngModel)]="userRegister.altura"></ion-input>
         <ion-note slot="end">cm</ion-note>
       </ion-item>
     </ion-list>
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Peso: </ion-label>
-        <ion-input min="40" max="160" type="number"></ion-input>
+        <ion-input min="40" max="160" type="number" [(ngModel)]="userRegister.peso"></ion-input>
         <ion-note slot="end">kg</ion-note>
       </ion-item>
     </ion-list>

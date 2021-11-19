@@ -3,18 +3,17 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/comp
 import { Info } from '../interfaces/info';
 import { Router } from '@angular/router';
 
-export class TODO {
-  // $key?: string;
-  perna: string;
-  costas: string;
-  peito: string;
-  aerobico: string;
+export class userDetail {
+  email: string;
+  nomeCompleto: string;
+  altura: number;
+  peso: number;
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class InfoService {
+export class InfoServiceUsuarioDetail {
   private infoCollection: AngularFirestoreCollection<Info>;
 
   constructor(
@@ -23,27 +22,27 @@ export class InfoService {
     this.infoCollection = this.afs.collection<Info>('Info');
   }
 
-  create(todo: TODO) {
-    return this.afs.collection('tasks').add(todo);
+  create(todo: userDetail) {
+    return this.afs.collection('usuarioDetail').add(userDetail);
   }
 
   getTasks() {
-    return this.afs.collection('tasks').snapshotChanges();
+    return this.afs.collection('usuarioDetail').snapshotChanges();
   }
   
   getTask(id) {
-    return this.afs.collection('tasks').doc(id).valueChanges();
+    return this.afs.collection('usuarioDetail').doc(id).valueChanges();
   }
 
-  update(id, todo: TODO) {
-    this.afs.collection('tasks').doc(id).update(todo)
+  update(id, userDetail: userDetail) {
+    this.afs.collection('usuarioDetail').doc(id).update(userDetail)
       .then(() => {
         this.router.navigate(['/todo-list']);
       }).catch(error => console.log(error));;
   }
 
   delete(id: string) {
-    this.afs.doc('tasks/' + id).delete();
+    this.afs.doc('usuarioDetail/' + id).delete();
   }
 
 }

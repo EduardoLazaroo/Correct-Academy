@@ -11,24 +11,18 @@ import { InfoService, TODO } from 'src/app/services/info.service';
 })
 export class PrgprogPage implements OnInit {
   perguntasForm: FormGroup;
+  perna: string;
+  costas: string;
+  peito: string;
+  aerobico: string;
+  valores: TODO;
 
   constructor(
     private router: Router,
     public toastController: ToastController,
     private infoService: InfoService,
     private formBuilder: FormBuilder,
-  ) {
-
-    /*const borba: TODO = {
-      title: 'teste',
-      description: 'teste2'
-    }
-    this.infoService.create(borba).then(() => {
-      console.log('gravouu!')
-    }).catch(error => console.log(error));
-  */
- 
-  }
+  ) { }
 
   ngOnInit() {
     this.perguntasForm = this.formBuilder.group({
@@ -39,7 +33,24 @@ export class PrgprogPage implements OnInit {
     })
   }
 
-  salvarPerguntas() {
+  salvarPerguntas() {    
+    this.perna = this.perguntasForm.get('perna').value; 
+    this.costas = this.perguntasForm.get('costas').value; 
+    this.peito = this.perguntasForm.get('peito').value; 
+    this.aerobico = this.perguntasForm.get('aerobico').value;
+
+    this.valores = {
+      perna: this.perna,
+      costas: this.costas,
+      peito: this.peito,
+      aerobico: this.aerobico
+    }
+
+    this.infoService.create(this.valores).then(() => {
+      console.log('gravouu!')
+    }).catch(error => console.log(error));
+    
+
     console.log(this.perguntasForm.value)
   }
 

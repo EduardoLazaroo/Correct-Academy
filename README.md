@@ -1,3 +1,5 @@
+   FINALIZADO!!
+
 Correct-Academy: 
 
 Uma ideia de projeto que criou forma quando foi solicitado pelo professor um App como nota do 4° termo, o intuito principal era criar a aplicação para que as pessoas pudessem instalar em seus dispositivos móveis e ter acesso gratuito aos conteúdos de treinos físicos de maneira didática.

@@ -46,12 +46,7 @@ export class PrgprogPage implements OnInit {
       aerobico: this.aerobico
     }
 
-    this.infoService.create(this.valores).then(() => {
-      console.log('gravouu!')
-    }).catch(error => console.log(error));
-    
-
-    console.log(this.perguntasForm.value)
+    this.infoService.create(this.valores).then(() => {}).catch(error => console.log(error));
   }
 
   async menssageConfirm() {

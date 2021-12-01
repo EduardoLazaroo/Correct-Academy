@@ -23,14 +23,14 @@ export class InfoServiceUsuarioDetail {
   }
 
   create(todo: userDetail) {
-    return this.afs.collection('usuarioDetail').add(userDetail);
+    return this.afs.collection('usuarioDetail').add(todo);
   }
 
-  getTasks() {
+  getUsuarioDetails() {
     return this.afs.collection('usuarioDetail').snapshotChanges();
   }
   
-  getTask(id) {
+  getUsuarioDetail(id) {
     return this.afs.collection('usuarioDetail').doc(id).valueChanges();
   }
 

@@ -6,7 +6,6 @@ import { InfoServiceUsuarioDetail, userDetail } from 'src/app/services/info.serv
 import { LoadingController, ToastController } from '@ionic/angular';
 import { InfoService, TODO } from 'src/app/services/info.service';
 
-
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.page.html',
@@ -36,26 +35,27 @@ export class CadastroPage implements OnInit {
   // inicio registro - cadastro
   async register() {
 
-    console.log('user', this.userRegister);
-    console.log('1', this.userRegister.altura);
-    console.log('2', this.userRegister.nomeCompleto);
-    console.log('3', this.userRegister.peso);
+    // console.log('user', this.userRegister);
+    // console.log('1', this.userRegister.altura);
+    // console.log('2', this.userRegister.nomeCompleto);
+    // console.log('3', this.userRegister.peso);
 
     this.userDetail = {
-      email: this.email,
-      nomeCompleto: this.nomeCompleto,
-      altura: this.altura,
-      peso: this.peso
+      email: this.userRegister.email,
+      nomeCompleto: this.userRegister.nomeCompleto,
+      altura: this.userRegister.altura,
+      peso: this.userRegister.peso
     }
     await this.presentLoading();
     // try
     try {
 
-      // await this.authService.register(this.userRegister).then(
-      //   this.InfoServiceUsuarioDetail.create(this.userDetail).then((response) => {
-      //     console.log('gravouu!', response);
-      //   }).catch(error => console.log(error));
-      // );
+      await this.authService.register(this.userRegister).then((response)=>{
+        if(response.additionalUserInfo.isNewUser == true){
+          this.InfoServiceUsuarioDetail.create(this.userDetail).then((response) => {
+          }).catch(error => console.log(error));
+        }
+      });
 
       this.router.navigate(['home']);
     } catch (error) {

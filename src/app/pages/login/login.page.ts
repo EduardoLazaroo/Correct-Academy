@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
+import { Storage } from '@ionic/storage'
 
 @Component({
   selector: 'app-login',
@@ -12,13 +13,15 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginPage implements OnInit {
   public userLogin: User = {};
   private loading: any;
+  // private _storage: Storage | null = null;
 
   constructor(
     private router: Router,
     //implementado
     private loadingCtrl: LoadingController,
     private tostCtrl: ToastController,
-    private authService: AuthService
+    private authService: AuthService,
+    private storage: Storage,
   ) { }
 
   ngOnInit() {
@@ -28,7 +31,11 @@ export class LoginPage implements OnInit {
     await this.presentLoading();
     //try
     try {
-      await this.authService.login(this.userLogin);
+      await this.authService.login(this.userLogin).then(response=>{
+        this.storage.create();
+        this.storage.set('email', response.user.email);
+        const fonn = this.storage.get('email');
+      });
       this.router.navigate(['home']);
     } catch (error) {
       console.error(error);

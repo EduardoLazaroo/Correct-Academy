@@ -35,11 +35,6 @@ export class CadastroPage implements OnInit {
   // inicio registro - cadastro
   async register() {
 
-    // console.log('user', this.userRegister);
-    // console.log('1', this.userRegister.altura);
-    // console.log('2', this.userRegister.nomeCompleto);
-    // console.log('3', this.userRegister.peso);
-
     this.userDetail = {
       email: this.userRegister.email,
       nomeCompleto: this.userRegister.nomeCompleto,
@@ -47,7 +42,7 @@ export class CadastroPage implements OnInit {
       peso: this.userRegister.peso
     }
     await this.presentLoading();
-    // try
+
     try {
 
       await this.authService.register(this.userRegister).then((response)=>{

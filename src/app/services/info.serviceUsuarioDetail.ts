@@ -30,7 +30,7 @@ export class InfoServiceUsuarioDetail {
     return this.afs.collection('usuarioDetail').snapshotChanges();
   }
   
-  getUsuarioDetail(id) {
+  getUsuarioDetail(id:string) {
     return this.afs.collection('usuarioDetail').doc(id).valueChanges();
   }
 

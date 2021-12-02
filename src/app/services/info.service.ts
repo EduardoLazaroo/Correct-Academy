@@ -4,7 +4,6 @@ import { Info } from '../interfaces/info';
 import { Router } from '@angular/router';
 
 export class TODO {
-  // $key?: string;
   perna: string;
   costas: string;
   peito: string;

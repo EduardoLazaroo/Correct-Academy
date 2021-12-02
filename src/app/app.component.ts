@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Storage } from '@ionic/storage'
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
+
+
 export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home'},
@@ -13,9 +17,14 @@ export class AppComponent {
     { title: 'Boost!', url: '/prgprog', icon: 'flame'},
     { title: 'Informações', url: '/comment', icon: 'information'},
   ];
-  constructor( private afa: AngularFireAuth) {
+  constructor( 
+    private afa: AngularFireAuth,
+    private storage: Storage,
+    ) {
   }
-  logout(){
+  async logout(){
+    await this.storage.remove('email');
     this.afa.signOut();
+    window.location.reload();
   }
 }
